@@ -4,7 +4,7 @@ class Solution:
         # ans = []
         # x = len(nums)
 
-
+        # O(n^2)time and O(1)space
         # sliding window with while loop
         # while i < x-1:
         #     j = i + 1
@@ -24,9 +24,16 @@ class Solution:
         # return ans
         
         # using a hashmap, finding if the complementary value exists
-        hmap = {}
-        for i,n in enumerate(nums):
-            diff = target - n
-            if diff in hmap:
+        # O(n) space complexity and O(n) time complexity
+        hmap = {} # val:index
+        # for i,n in enumerate(nums): #gives you index and value at once
+        #     diff = target - n
+        #     if diff in hmap.keys(): #check if diff is a key
+        #         return [hmap[diff],i] #add the two index values to array
+        #     hmap[n] = i #append the index (value) to the value (key)
+
+        for i in range(0,len(nums)):
+            diff = target - nums[i]
+            if diff in hmap.keys():
                 return [hmap[diff],i]
-            hmap[n] = i
+            hmap[nums[i]]=i
