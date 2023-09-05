@@ -13,9 +13,8 @@ class Solution:
         
         result = []
         for s in strs:
-            sorted_s = tuple(sorted(s))
             #tuple makes it able to be used as a key i.e. storing an array as a single variable
-            print (sorted_s)
+            sorted_s = tuple(sorted(s))            
             #get the sorted form and use it as a key, hence all anagrams add to it
             #appending the values themselves not adding the occurences like in 1 + map(s[i],0)
             map[sorted_s].append(s)
