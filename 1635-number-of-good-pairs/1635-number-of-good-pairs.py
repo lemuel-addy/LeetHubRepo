@@ -10,11 +10,19 @@ class Solution:
             
         # return count
 
-        hmap = {}
+        # hmap = {}
 
-        for i in range(0,len(nums)):
-            count += hmap.get(nums[i],0)
-            hmap[nums[i]] = 1 + hmap.get(nums[i],0)
-        return count
+        # for i in range(0,len(nums)):
+        #     count += hmap.get(nums[i],0)
+        #     hmap[nums[i]] = 1 + hmap.get(nums[i],0)
+        # return count
 
-        
+        st = set(nums)
+        c=0
+        for i in st:
+            a=nums.count(i)
+            if a==1:
+                pass
+            else:
+                c+=a*(a-1)//2
+        return c
