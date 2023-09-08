@@ -7,6 +7,7 @@
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
         holder = set()
+        
         while head is not None:
             if head in holder:
                 return True
@@ -14,7 +15,7 @@ class Solution:
                 holder.add(head)            
             
             head = head.next            
-         
+       
         return False
             
 # class Solution:
