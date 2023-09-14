@@ -9,13 +9,12 @@ class Solution:
         while list1 and list2:
             
             if list1.val > list2.val:
-                result.next = list2
-                result = result.next
+                result.next = list2      
                 list2 = list2.next
             else:
                 result.next = list1
-                result = result.next
                 list1 = list1.next
+            result = result.next
         if list1:
             result.next = list1
         if list2:
