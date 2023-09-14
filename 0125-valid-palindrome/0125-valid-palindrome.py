@@ -10,6 +10,7 @@ class Solution:
 
         # return True
 
+        #uses alphanumeric function as well as more memory
         strs = []
         for i in s:
             if i.isalnum():
@@ -19,7 +20,18 @@ class Solution:
         #         return False
         # return True
 
-        return strs == strs[::-1]
+        # return strs == strs[::-1]
 
-            
+
+        #using constant extra memory using pointers
+        first = 0
+        last = len(strs)-1
+        while first < last:
+
+            if strs[first] != strs[last]:
+                return False
+            first += 1
+            last -= 1
+        return True
+             
                 
