@@ -1,4 +1,7 @@
 class Solution:
+    def alphaNum(self,c):
+            return (ord('A')<= ord(c)<= ord('Z') or ord('a')<= ord(c)<= ord('z') or ord('0')<= ord(c)<= ord('9'))
+
     def isPalindrome(self, s: str) -> bool:
         # strs = ""
         # for i in range(0, len(s)):
@@ -27,10 +30,10 @@ class Solution:
         first = 0
         last = len(s)-1
         while first < last:
-            if not s[first].isalnum():
+            if not self.alphaNum(s[first]):
                 first += 1
                 continue
-            if not s[last].isalnum():
+            if not self.alphaNum(s[last]):
                 last -= 1
                 continue
             if s[first].lower() != s[last].lower():
@@ -38,5 +41,10 @@ class Solution:
             first += 1
             last -= 1
         return True
+
+
+        # without using alphanumeric function
+
+        
              
                 
