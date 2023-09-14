@@ -11,10 +11,10 @@ class Solution:
         # return True
 
         #uses alphanumeric function as well as more memory
-        strs = []
-        for i in s:
-            if i.isalnum():
-                strs.append(i.lower())
+        # strs = []
+        # for i in s:
+        #     if i.isalnum():
+        #         strs.append(i.lower())
         # for h in range(0,len(strs)):
         #     if strs[h] != strs[-1-h]:
         #         return False
@@ -25,10 +25,15 @@ class Solution:
 
         #using constant extra memory using pointers
         first = 0
-        last = len(strs)-1
+        last = len(s)-1
         while first < last:
-
-            if strs[first] != strs[last]:
+            if not s[first].isalnum():
+                first += 1
+                continue
+            if not s[last].isalnum():
+                last -= 1
+                continue
+            if s[first].lower() != s[last].lower():
                 return False
             first += 1
             last -= 1
