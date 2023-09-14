@@ -14,10 +14,12 @@ class Solution:
         for i in s:
             if i.isalnum():
                 strs.append(i.lower())
-        for h in range(0,len(strs)):
-            if strs[h] != strs[-1-h]:
-                return False
-        return True
+        # for h in range(0,len(strs)):
+        #     if strs[h] != strs[-1-h]:
+        #         return False
+        # return True
+
+        return strs == strs[::-1]
 
             
                 
