@@ -24,16 +24,19 @@ class Solution:
 
 
 
-        # track = 1
+        
         # hold = 0
         # rep = 0
         # for i in range(0,len(s)-1):
         #     j = i + 1
         #     x = i
-        #     while rep < k and j < len(s):
+        #     track = 1
+        #     while rep <= k and j < len(s):
         #             if (s[j] != s[x]):
         #                 rep += 1
         #                 track +=1
+        #                 print(s[x])
+        #                 print(s[j])
 
         #             else:
         #                 track +=1
@@ -43,8 +46,8 @@ class Solution:
         #     rep = 0
         #     hold = max(hold,track)
         #     track = 1
-        # # hold = max(hold,track)
-        # return hold + 1
+        # hold = max(hold,track)
+        # return hold 
 
 
                     
