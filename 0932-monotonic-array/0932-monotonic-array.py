@@ -1,6 +1,6 @@
 class Solution:
     def isMonotonic(self, nums: List[int]) -> bool:
-       #REVISE
+       
         if len(nums)<=2:
             return True
 
