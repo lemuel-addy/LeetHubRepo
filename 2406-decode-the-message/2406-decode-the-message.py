@@ -3,14 +3,15 @@ class Solution:
     def decodeMessage(self, key: str, message: str) -> str:
         d={' ':' '}
         c=97
-        for i in range(len(key)):
+        for i in range(0,len(key)):
+            
             if key[i] not in d:
                 d[key[i]]=chr(c)
                 c+=1
 
-        result=''    
+        result=[]    
         for i in range(len(message)):
 
-            result+=d[message[i]]  
-        return result        
+            result.append(d[message[i]]) 
+        return ''.join(result)        
         
