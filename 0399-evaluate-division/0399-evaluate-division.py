@@ -23,8 +23,4 @@ class Solution:
             return -1
             
 
-                    
-
-
-
         return[bfs(q[0],q[1]) for q in queries]
