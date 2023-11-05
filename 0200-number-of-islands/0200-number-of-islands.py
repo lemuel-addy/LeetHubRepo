@@ -1,7 +1,7 @@
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
+        #REVISE
         ROW,COL = len(grid),len(grid[0])
-
         count = 0
 
         for i in range(ROW):
@@ -18,7 +18,8 @@ class Solution:
             return
         if grid[i][j] == "#" or grid[i][j] == "0":
             return
-        grid[i][j]= "#"
+        if grid[i][j] == "1":
+            grid[i][j]= "#"
 
         self.dfs(i+1,j,grid)
         self.dfs(i-1,j,grid)
